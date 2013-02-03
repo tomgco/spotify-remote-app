@@ -1,18 +1,5 @@
-<div class="section">
-    <h1>Play a single track</h1>
-    <p class="description">This snippet of code plays a hardcoded Spotify URI.</p>
-
-    <h3>The Javascript</h3>
-    <div id="js"></div>
-
-    <h3>The HTML</h3>
-    <div id="html"></div>
-
-    <h3>Live Example</h3>
-    <div class="html-snippet" data-container="html">
-        <div id="single-track-player"></div>
-    </div>
-    <script type="script/snippet" data-container="js">
+"use strict";
+window.onload = function() {
         var sp = getSpotifyApi();
         var models = sp.require("$api/models");
         var views = sp.require("$api/views");
@@ -27,5 +14,4 @@
         /* Pass the player HTML code to #single-track-player */
         var single_track_player_HTML = document.getElementById('single-track-player');
         single_track_player_HTML.appendChild(single_track_player.node);
-    </script>
-</div>
+};
